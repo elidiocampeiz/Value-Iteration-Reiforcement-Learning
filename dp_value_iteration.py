@@ -92,7 +92,7 @@ def calculate_greedy_policy(Maze, V):
     policy[Maze.goal] = 'G'
     return policy
 
-
+# NOTE: To Start the simulation please close the first visualization windown 
 if __name__ == '__main__':
     # this grid gives you a reward of -0.1 for every non-terminal state
     # we want to see if this will encourage finding a shorter path to the goal
@@ -134,7 +134,8 @@ if __name__ == '__main__':
     ]
     # Ask of step_cost
     # it = (int(input("Choose max number iterations")))
-    step_cost = (float(input("Choose step cost")))
+    # step_cost = (float(input("Choose step cost: ")))
+    step_cost = 0.5
     grid = RL.RL_Maze(office_list, (0, 13), (0, 14), step_cost)
     grid.setup()
 
